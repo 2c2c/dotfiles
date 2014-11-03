@@ -14,7 +14,7 @@ Bundle 'kien/ctrlp.vim'
 
 "-------- YCM -----------------"
 Bundle 'Valloric/YouCompleteMe'
-let g:ycm_global_ycm_extra_conf='~/.vim/bundle/YouCompleteMe/.ycm_extra_conf.py'
+let g:ycm_global_ycm_extra_conf='~/dotfiles/.ycm_extra_conf.py'
 let g:ycm_confirm_extra_conf=0
 let g:ycm_autoclose_preview_window_after_completion = 1
 let g:ycm_autoclose_preview_window_after_insertion = 1
