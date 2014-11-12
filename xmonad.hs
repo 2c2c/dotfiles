@@ -40,7 +40,7 @@ myBorderWidth   = 1
 -- ("right alt"), which does not conflict with emacs keybindings. The
 -- "windows key" is usually mod4Mask.
 --
-myModMask       = mod4Mask
+myModMask       = mod1Mask
  
 -- NOTE: from 0.9.1 on numlock mask is set automatically. The numlockMask
 -- setting should be removed from configs.
@@ -93,7 +93,7 @@ myKeys conf@(XConfig {XMonad.modMask = modm}) = M.fromList $
     , ((modm,               xK_p     ), spawn "exe=`dmenu_path | dmenu` && eval \"exec $exe\"")
  
     -- launch gmrun
-    , ((modm .|. shiftMask, xK_p     ), spawn "gmrun")
+     , ((modm .|. shiftMask, xK_p     ), spawn "gmrun")
  
     -- close focused window
     , ((modm .|. shiftMask, xK_c     ), kill)
@@ -246,6 +246,8 @@ myManageHook = composeAll
     [ className =? "MPlayer"        --> doFloat
     , className =? "Gimp"           --> doFloat
     , resource  =? "desktop_window" --> doIgnore
+    , className =? "trayer"         --> doIgnore
+    , resource  =? "trayer"         --> doIgnore
     , resource  =? "kdesktop"       --> doIgnore ]
  
 ------------------------------------------------------------------------
