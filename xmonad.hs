@@ -79,7 +79,7 @@ myWorkspaces    = ["1","2","3","4","5","6","7","8","9"]
 -- Border colors for unfocused and focused windows, respectively.
 --
 myNormalBorderColor  = "#dddddd"
-myFocusedBorderColor = "#00ff00"
+myFocusedBorderColor = "#00ffb0"
  
 ------------------------------------------------------------------------
 -- Key bindings. Add, modify or remove key bindings here.
@@ -245,6 +245,7 @@ myLayout = tiled ||| Mirror tiled ||| Full
 myManageHook = composeAll
     [ className =? "MPlayer"        --> doFloat
     , className =? "Gimp"           --> doFloat
+    , className =? "screenkey"      --> doFloat
     , resource  =? "desktop_window" --> doIgnore
     , className =? "trayer"         --> doIgnore
     , resource  =? "trayer"         --> doIgnore
