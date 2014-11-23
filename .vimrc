@@ -58,6 +58,7 @@ set nocompatible   " Disable vi-compatibility
 set number
 set visualbell
 set cursorline
+set hidden "allows switching away from buffers wihtout annoying fucking messages
 
 set laststatus=2   " Always show the statusline
 set encoding=utf-8 " Necessary to show Unicode glyphs
@@ -91,7 +92,7 @@ nnoremap <Leader>l :ls<CR>
 nnoremap <silent> <Leader>j :bp!<CR>
 nnoremap <silent> <Leader>k :bn!<CR>
 nnoremap <silent> <Leader>d :bd<CR>
-nnoremap <silent> <Leader><Space> :b#!<CR>
+nnoremap <silent> <Leader><Space> :b#<CR>
 nnoremap <silent> <Leader>1 :1b!<CR>
 nnoremap <silent> <Leader>2 :2b!<CR>
 nnoremap <silent> <Leader>3 :3b!<CR>
