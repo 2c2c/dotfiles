@@ -91,7 +91,7 @@ nnoremap <Leader>l :ls<CR>
 nnoremap <silent> <Leader>j :bp!<CR>
 nnoremap <silent> <Leader>k :bn!<CR>
 nnoremap <silent> <Leader>d :bd<CR>
-nnoremap <silent> <Leader><Space> :e#!<CR>
+nnoremap <silent> <Leader><Space> :b#!<CR>
 nnoremap <silent> <Leader>1 :1b!<CR>
 nnoremap <silent> <Leader>2 :2b!<CR>
 nnoremap <silent> <Leader>3 :3b!<CR>
