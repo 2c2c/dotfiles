@@ -46,8 +46,10 @@ let g:ycm_global_ycm_extra_conf='~/dotfiles/.ycm_extra_conf.py'
 let g:ycm_confirm_extra_conf=0
 let g:ycm_autoclose_preview_window_after_completion = 1
 let g:ycm_autoclose_preview_window_after_insertion = 1
-
 "-------- YCM -----------------"
+
+let g:cpp_class_scope_highlight = 1
+let g:cpp_experimental_template_highlight = 1
 Bundle 'octol/vim-cpp-enhanced-highlight'
 call vundle#end()
 
@@ -73,7 +75,6 @@ set t_Co=256
 let g:zenburn_old_Visual=1
 colorscheme zenburn
 
-command C11 !g++ -Wall -Werror -ansi -pedantic -std=c++11 -g %
 
 "Makefile no tab -> spaces issue
 autocmd FileType make setlocal noexpandtab
@@ -103,3 +104,6 @@ nnoremap <silent> <Leader>7 :7b!<CR>
 nnoremap <silent> <Leader>8 :8b!<CR>
 nnoremap <silent> <Leader>9 :9b!<CR>
 nnoremap <silent> <Leader>0 :10b!<CR>
+"compile and run binds
+nnoremap <silent> <Leader><Tab> :!g++ -Wall -Werror -ansi -pedantic -std=c++11 -g %<CR>
+nnoremap <silent> <Leader>q :!./a.out<CR>
